@@ -1,0 +1,118 @@
+---
+title: "How to use terminal for info 201 GitHub assignments"
+author: "Elizabeth Castillo"
+date: 11-09-2018
+output: html_notebook
+---
+"How to access files on terminal"
+---
+
+```{r}
+When you open terminal, your window should look like this:
+  the name elizabeth on terminal is my user, your's will obviously be your name or something different
+```
+![](Desktop/terminalpage1.png)
+
+```{r}
+In order to get into a certain folder using terminal, specific commands need to be known first.
+Here's a common list of commands we will use. I will explain what each of them do later on. 
+- cd 
+- ls
+- cd ..
+okay, let's try using them.
+```
+
+```{r}
+The ls command prints out our main files 
+```
+
+![](Desktop/terminal2.png)
+```{r}
+Let's say you messed up, and want to go back one step. We use the cd .. command.
+```
+![](Desktop/term3.png)
+```{r}
+as you can see it takes us back
+```
+
+
+"Accessing GitHub homework files from terminal"
+---
+
+```{r}
+In class you will create your own repo on GitHub. Cloning the homework files into your local computer
+and then "pushing" the edited files back to GitHub. This will be done using terminal
+```
+```{r}
+Step 1: where did you save the GitHub files to? 
+  I cloned the files into the Documents folder
+```
+![](Desktop/step4.png)
+```{r}
+Step 2: We do the ls command to find all files under my username. this lists basic folders.
+we want to access the Documents folder since that's were we cloned our GitHub files
+to do this we do cd Documents/ if your folder is named documents you do cd documents/
+after the command, you're already in the Documents folder.
+But why the cd command? the cd command essentially tells terminal to go inside that certain folder
+```
+
+**Remember terminal is case sensitive and don't forget the slash!**
+**whenever you want to enter into another file you do cd foldername/**
+```{r}
+Step 3: we do the ls command to print all files inside the Document folder on terminal. 
+```
+![](Desktop/term4.png)
+```{r}3
+Step 4: the homework folder I have cloned from GitHub is named a9-githubuser in order to go inside that folder we use the cd command 
+```
+![](Desktop/step5.png)
+ˆ
+```{r}
+Step 5: type the ls command to print files inside the a9-githubuser folder
+```
+![](Desktop/step6.png)
+```{r}
+Step 6: you want to open the file on an editor in terminal first, we will use vim, but you can use any
+editor you would like. the command is
+vi README.md 
+README.md is the file name
+scroll to the end of the file and type :q! and press enter. This is a way to leave the editor.
+to leave the terminal type exit and then safely close terminal
+```
+![](Desktop/step7.png)
+![](Desktop/vi.png)
+```{r}
+Okay! so you have finished the homework, now to push the edited file to GitHub.
+```
+**Remeber to SAVE the edited file first before pushing to GitHub**
+---
+```{r}
+Step 1: We want to go into the folder where our homework file would be 
+cd Documents/a9-githubuser9 
+your pathway may be different depending where you cloned the homework, but we are using the previous example
+```
+```{r}
+Step 2: Check status of file by using git status -s
+you should see something similar as the picture
+```
+![](Desktop/tiny.png)
+```{r}
+Step 3: Type git commit -m "type a comment of what you have done" README.md 
+the name of the file I have edited in this case is named README.md
+```
+![](Desktop/second.png)
+* you should get a message with the end saying the following which means you're doing great!*
+```{r}
+Step 4: type in git status 
+the bottom should say "nothing to commit, working tree clean"
+```
+```{r}
+Step 5: git push
+wait a couple seconds, the end of the paragraph should say something similar:
+master -> master
+```
+
+```{r}
+Once you log in to Github, it should say how long ago the commit & push was made, everytime you made a edit to the file and want to push to github, just repeat these steps!
+```
+
